@@ -55,6 +55,7 @@
         </select>
         <span x-show="plan" x-text="`you have chosen the ${plan} plan`"></span>
     </div>
+    
     <div x-data="{ fruits: ['apple', 'Mango', 'banana', 'orange']}">
         
         <template x-for="fruit, index in fruits">
