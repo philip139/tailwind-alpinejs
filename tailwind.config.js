@@ -5,10 +5,22 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-
+        container: {
+            center: true,
+            padding: '65px',
+        },
         extend: {
             height: {
-                '21': '90px',
+                '108': '108px',
+            },
+            maxHeight: {
+                '75': '75px',
+            },
+            boxShadow: {
+                'navBottom': '0 0 20px rgb(0 0 0 / 15%)',
+            },
+            margin: {
+                '100': '100px'
             }
         },
     },
