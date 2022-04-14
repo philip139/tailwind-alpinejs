@@ -10,7 +10,8 @@
 <body>
     @include('layouts.includes.header')
 
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 lg:py-8">
+    <!-- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 lg:py-8"> -->
+    <div class="container">
     @yield('body')
     <div>
     
