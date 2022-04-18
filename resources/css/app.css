@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 label.checkbox:before{
 	content: "";
     display: inline-block;
@@ -39,5 +40,9 @@ label.checkbox:checked+label:after {
     font-weight: 700;
     margin-bottom: 15px;
     transition: all .4s ease;
-    width: 100%;
+    width: 100%;font-size: 25px;    color: #4a4a4a;
+}
+svg{font-size: 23px;    color: #4a4a4a;}
+label.w-full.flex.checkbox.border-0 {
+    font-size: 25px;
 }
