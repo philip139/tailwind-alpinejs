@@ -19,9 +19,13 @@ module.exports = {
             boxShadow: {
                 'navBottom': '0 0 20px rgb(0 0 0 / 15%)',
                 'topshadow': '0 0 20px rgb(0 0 0 / 15%)',
+
             },
             margin: {
                 '100': '100px'
+            },
+            fontFamily: {
+                'Eureka': 'EurekaSansRegular',
             },
             colors: {
                 'baige': '#fbecc7',
@@ -64,6 +68,23 @@ module.exports = {
                     '800': '#060606',
                     '900': '#000000'
                 },
+                'tundora': {
+                    DEFAULT: '#4A4A4A',
+                    '50': '#A6A6A6',
+                    '100': '#9C9C9C',
+                    '200': '#878787',
+                    '300': '#737373',
+                    '400': '#5E5E5E',
+                    '500': '#4A4A4A',
+                    '600': '#2E2E2E',
+                    '700': '#121212',
+                    '800': '#000000',
+                    '900': '#000000'
+                },
+
+            },
+            fontSize: {
+                '25': '25px',
             }
         },
     },

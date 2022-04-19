@@ -1,10 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-label.checkbox:before{
-	content: "";
+label.checkbox:before {
+    content: "";
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -18,21 +16,23 @@ label.checkbox:before{
     background: #fff;
     margin-right: 10px;
 }
+
 label.checkbox:checked+label:after {
     transform: rotate(45deg);
     height: 15px;
     width: 8px;
     background-color: transparent;
-    border-right: 3px solid ;
-    border-bottom: 3px solid ;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
     display: block;
     position: absolute;
     left: 9px;
     top: 5px;
     content: "";
 }
-.form_input{
-	border: 0.5px solid rgba(0,0,0,.2);
+
+.form_input {
+    border: 0.5px solid rgba(0, 0, 0, .2);
     box-shadow: 0 0 20px rgb(0 0 0 / 15%);
     outline: 0;
     background-color: #fff;
@@ -40,9 +40,25 @@ label.checkbox:checked+label:after {
     font-weight: 700;
     margin-bottom: 15px;
     transition: all .4s ease;
-    width: 100%;font-size: 25px;    color: #4a4a4a;
+    width: 100%;
+    font-size: 25px;
+    color: #4a4a4a;
 }
-svg{font-size: 23px;    color: #4a4a4a;}
+
+svg {
+    font-size: 23px;
+    color: #4a4a4a;
+}
+
 label.w-full.flex.checkbox.border-0 {
     font-size: 25px;
+}
+
+
+/**include font**/
+
+@font-face {
+    font-family: EurekaSansRegular;
+    font-weight: normal;
+    src: url("../../public/fonts/EurekaSansRegular.otf") format("opentype");
 }

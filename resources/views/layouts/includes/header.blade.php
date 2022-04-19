@@ -2,8 +2,7 @@
     <div class="container">
         <div class=" flex items-center justify-center h-108">
             <a href="{{url('')}}">
-                <!-- <img src="../../../../images/logo-otto.png"/> -->
-                <img class="max-h-75" src="https://otto-eg.com/_nuxt/img/logo.daea52c.png" />
+                <img class="max-h-75" src="{{URL::asset('/images/logo-otto.png')}}">
             </a>
         </div>
     </div>

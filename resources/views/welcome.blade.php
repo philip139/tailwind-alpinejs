@@ -2,7 +2,7 @@
 
 
 
-<div class="mt-100 ">
+<div class=" font-Eureka">
     <div class="">
         <style>
             [x-cloak] {
@@ -11,23 +11,9 @@
         </style>
         <div x-data="app()" x-cloak>
             <div class=" w-full py-10">
-
-                <div x-show.transition="step === '4'">
-                    <div class="bg-white rounded-lg p-10 flex items-center shadow justify-between">
-                        <div>
-                            <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-
-                            <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Payment</h2>
-
-
-
-                        </div>
-                    </div>
-                </div>
-
                 <div x-show.transition="step != '4'">
                     <!-- Step Content -->
-                    <div class="py-10">
+                    <div class="pt-12 pb-24">
                         <div x-show.transition.in="step === 1">
                             <div class="flex" style="min-height: 500px;" x-data="{ destinations: [
                                 {id: 'cairo', label: 'OTTO Cairo',desImg: 'cairo.jpg'},
@@ -72,14 +58,71 @@
                         </div>
                         <div x-show.transition.in="step === 2">
 
-                            form 2 here
+
+                            form 2
 
                         </div>
                         <div x-show.transition.in="step === 3">
-                            form 3 here
+                            <div class="grid lg:grid-cols-2 sm:grid-flow-cols-1">
+                                <div class="px-3">
+                                    <div class="grid gap-4 grid-cols-2">
+                                        <input class="bg-white shadow-topshadow text-lg py-5 px-5 mb-6 focus:outline-none" required="required" placeholder="First Name" type="text">
+                                        <input class="bg-white shadow-topshadow text-lg py-5 px-5 mb-6 focus:outline-none" required="required" placeholder="Last Name" type="text">
+                                    </div>
+                                    <div class="grid grid-cols-1">
+                                        <input class="bg-white shadow-topshadow text-lg py-5 px-5 mb-6 focus:outline-none" required="required" placeholder="Email" type="email">
+                                    </div>
+                                    <div class="grid grid-cols-1">
+                                        <input class="bg-white shadow-topshadow text-lg py-5 px-5 mb-6 focus:outline-none" required="required" placeholder="Mobile" type="text">
+                                    </div>
+
+                                    <div class="mt-12">
+                                        <div class="text-25 text-tundora-500 font-bold">Checkout</div>
+                                        <div class="text-25 text-scarpa-flow-500 mt-6">
+                                            <span>Location</span>
+                                            <span class="text-redwood-500">: OTTO Cairo</span>
+                                        </div>
+                                        <div class="text-25 text-scarpa-flow-500 ">
+                                            <span>Date</span>
+                                            <span class="text-redwood-500">: Thu Apr 21 2022</span>
+                                        </div>
+                                        <div class="text-25 text-scarpa-flow-500 mb-6 ">
+                                            <span>Time</span>
+                                            <span class="text-redwood-500">: 1pm</span>
+                                        </div>
+                                        <div class="text-25 text-scarpa-flow-500  ">
+                                            <span>Number of seats</span>
+                                            <span class="text-redwood-500">: 2</span>
+                                        </div>
+                                        <div class="text-25 text-scarpa-flow-500  ">
+                                            <span>Reservation amount</span>
+                                            <span class="text-[#12a99f]">: 400 EGP</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="px-3">
+                                    <img class="mb-4" src="{{URL::asset('/images/destinations/giza.jpg')}}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- / Step Content -->
+                </div>
+                <div x-show.transition="step === '4'">
+                    <div class="flex justify-center">
+                        <div>
+                            <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+
+                            <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Booked successfully</h2>
+
+                            <div class="text-gray-600 mb-8">
+                                Thank you. We have sent you an email.
+                            </div>
+
+                            <button @click="step = 1" class="w-auto block mx-auto focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Make another reservation</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -90,20 +133,20 @@
                         <div class="w-3/4 pl-24">
                             <div class="grid grid-cols-4 pt-6 pb-2">
                                 <div class="flex items-center">
-                                    <div class="bg-redwood-500 text-2xl	text-white text-center w-3/5 py-2.5	">1</div>
+                                    <div @click="step = 1" class="bg-redwood-500 text-2xl text-white text-center w-3/5 py-2.5 cursor-pointer">1</div>
                                     <div class="w-2/5 h-0.5	bg-redwood-500	"></div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="bg-iron-500 text-2xl text-scarpa-flow-500 text-center w-3/5 py-2.5 cursor-pointer">2</div>
-                                    <div class="w-2/5 h-0.5	bg-iron-500"></div>
+                                    <div @click="step = 2" class=" text-2xl text-center w-3/5 py-2.5 cursor-pointer" x-bind:class="{'bg-iron-500 text-scarpa-flow-500':step < 2 ,'bg-redwood-500 text-white':step >= 2}">2</div>
+                                    <div class="w-2/5 h-0.5	" x-bind:class="{'bg-iron-500':step < 2 ,'bg-redwood-500':step >= 2}"></div>
                                 </div>
 
                                 <div class="flex items-center">
-                                    <div class="bg-iron-500 text-2xl text-scarpa-flow-500 text-center w-3/5 py-2.5 cursor-pointer">3</div>
-                                    <div class="w-2/5 h-0.5	bg-iron-500	"></div>
+                                    <div @click="step = 3" class=" text-2xl  text-center w-3/5 py-2.5 cursor-pointer" x-bind:class="{'bg-iron-500 text-scarpa-flow-500':step < 3 ,'bg-redwood-500 text-white':step >= 3}">3</div>
+                                    <div class="w-2/5 h-0.5" x-bind:class="{'bg-iron-500':step < 3 ,'bg-redwood-500':step >= 3}"></div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="bg-iron-500 text-2xl text-scarpa-flow-500 text-center w-3/5 py-2.5 cursor-pointer">4</div>
+                                    <div class=" text-2xl  text-center w-3/5 py-2.5 cursor-pointer" x-bind:class="{'bg-iron-500 text-scarpa-flow-500':step < 4 ,'bg-redwood-500 text-white':step >= 4}">4</div>
 
                                 </div>
 
@@ -112,9 +155,9 @@
                         </div>
 
                         <div class="w-1/4 text-right">
-                            <button x-show="step < 3" @click="step++" class="w-full	 focus:outline-none border border-transparent py-7 px-5  text-center text-redwood-500 italic bg-baige hover:bg-redwood-500 hover:text-baige text-4xl font-sans	">Next</button>
+                            <button x-show="step < 3" @click="step++" class="w-full	 focus:outline-none border border-transparent py-7 px-5  text-center text-redwood-500 italic bg-baige hover:bg-redwood-500 hover:text-baige text-4xl font-Eureka	">Next</button>
 
-                            <button @click="step = '4'" x-show="step === 3" class="w-full focus:outline-none border border-transparent py-7 px-5  text-center text-redwood-500 italic bg-baige hover:bg-redwood-500 hover:text-baige text-4xl font-sans">Submit</button>
+                            <button @click="step = '4'" x-show="step === 3" class="w-full focus:outline-none border border-transparent py-7 px-5  text-center text-redwood-500 italic bg-baige hover:bg-redwood-500 hover:text-baige text-4xl font-Eureka">Submit</button>
                         </div>
                     </div>
                 </div>
