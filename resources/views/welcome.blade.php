@@ -37,7 +37,7 @@
                                 <div class="px-3 column w-full sm:w-1/2">
                                     <form id="step_1" class="form">
                                         <div class="relative mb-12">
-                                            <select id="branch" class="appearance-none form_input cursor-pointer" name="branch" required="required" x-model="destinations.id">
+                                            <select id="branch" class="appearance-none form_input outline-0 text-scarpa-flow w-full text-input p-5 mb-4 shadow-input bg-white font-bold cursor-pointer transition duration-300 border-half border-input ease" name="branch" required="required" x-model="destinations.id">
                                                 <option value="" disabled>
                                                     Choose A Destination
                                                 </option>
@@ -45,10 +45,10 @@
                                                     <option :value="destination.id" x-text="destination.label" :img_src="destination.desImg"></option>
                                                 </template>
                                             </select>
-                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="max-h-5 absolute top-8 right-8 pointer-events-none cursor-pointer"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-svg text-scarpa-flow max-h-5 absolute top-8 right-8 pointer-events-none cursor-pointer"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                                         </div>
                                         <div class="relative mb-12">
-                                            <select id="branch" name="branch" required="required" class="appearance-none is-fullwidth is-cash form_input cursor-pointer" x-data="{ seats: [1,2,3,4,5,6,7,8,9,10]}">
+                                            <select id="branch" name="branch" required="required" class="appearance-none is-fullwidth is-cash form_input border-half border-input outline-0 transition duration-300 ease text-input text-scarpa-flow mb-4 w-full shadow-input bg-white font-bold p-5 cursor-pointer" x-data="{ seats: [1,2,3,4,5,6,7,8,9,10]}">
                                                 <option value="">
                                                 Number Of Seats
                                                 </option>
@@ -56,11 +56,11 @@
                                                     <option :value="seat" x-text="seat+' Seats'"></option>
                                                 </template> 
                                             </select>
-                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="max-h-5 absolute top-8 right-8 pointer-events-none cursor-pointer"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-svg text-scarpa-flow max-h-5 absolute top-8 right-8 pointer-events-none cursor-pointer"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
                                         </div>
                                         <div class="accept relative flex w-full">
                                             <input id="accept" value="accept" type="checkbox" name="payment" required="required" class="styled-checkbox invisible w-0">
-                                            <label for="accept" class="w-full flex checkbox border-0" data-v-668beab6="">I accept <strong>Our Limitations</strong>
+                                            <label for="accept" class="flex items-center w-full flex checkbox border-0 text-input text-scarpa-flow" data-v-668beab6="">I accept <label for="my-modal-4" class="ml-2 underline cursor-pointer text-scarpa-flow-600"><strong>Our Limitations</strong></label>
                                             </label>
                                         </div>
                                     </form>
@@ -121,6 +121,15 @@
             </div>
             <!-- / Bottom Navigation https://placehold.co/300x300/e2e8f0/cccccc -->
         </div>
+
+
+        <input type="checkbox" id="my-modal-4" class="modal-toggle">
+        <label for="my-modal-4" class="modal cursor-pointer">
+          <label class="modal-box relative" for="">
+            <h3 class="text-lg font-bold">Our Limitations</h3>
+            <ul class="list-disc p-4"><li>Upon arrival, please show the host your confirmation message</li><li>After exceeding 20 mins grace period, your reservation will be moved to the waiting list</li><li>If specified per chosen date, down payments are required to secure your reservation</li><li>Kindly respect your reservation time. Two hours are given per table</li><li>OTTO has the right to cancel any reservation made if needed</li><li>24-hour prior notice is needed for cancelations</li><li>Bookings aren't eligible for cancelation if after a 24-hour notice</li><li>No external food or beverage is allowed</li><li>No Laptops allowed</li></ul>
+          </label>
+        </label>
 
         <script>
             function app() {

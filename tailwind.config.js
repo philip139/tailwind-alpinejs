@@ -10,6 +10,10 @@ module.exports = {
             padding: '65px',
         },
         extend: {
+            fontSize: {
+                'input' : '25px',
+                'svg' : '23px',
+            },
             height: {
                 '108': '108px',
             },
@@ -19,9 +23,17 @@ module.exports = {
             boxShadow: {
                 'navBottom': '0 0 20px rgb(0 0 0 / 15%)',
                 'topshadow': '0 0 20px rgb(0 0 0 / 15%)',
+                'input': '0 0 20px rgb(0 0 0 / 15%)',
             },
             margin: {
                 '100': '100px'
+            },
+            borderWidth: {
+                  DEFAULT: '1px',
+                  'half': '0.5px',
+                },
+            borderColor:{
+                'input' : 'rgba(0,0,0,.2)',
             },
             colors: {
                 'baige': '#fbecc7',
