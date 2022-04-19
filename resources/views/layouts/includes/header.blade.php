@@ -1,4 +1,4 @@
-<nav class="sticky top-0 shadow-navBottom  w-full bg-white">
+<nav class="sticky z-10	 top-0 shadow-navBottom  w-full bg-white">
     <div class="container">
         <div class=" flex items-center justify-center h-108">
             <a href="{{url('')}}">
