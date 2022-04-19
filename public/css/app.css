@@ -2606,12 +2606,6 @@ body[dir="rtl"] .checkbox:checked,
 .align-top {
   vertical-align: top;
 }
-.font-\[EurekaSansRegular\] {
-  font-family: EurekaSansRegular;
-}
-.font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
 .font-Eureka {
   font-family: EurekaSansRegular;
 }
