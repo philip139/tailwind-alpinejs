@@ -1,7 +1,4 @@
 @extends('layouts.app') @section('title', 'home') @section('body')
-
-
-
 <div class=" font-Eureka">
     <div class="">
         <style>
@@ -21,7 +18,7 @@
                                 {id: 'alex', label: 'OTTO Alex',desImg: 'alex.jpg'},
                                 ]}">
                                 <div class="px-3 column w-full sm:w-1/2">
-                                    <form id="step_1" class="form">
+                                    <form id="step_1" class="form" @submit.prevent="console.log('asdas asd ')">
                                         <div class="relative mb-12 text-25">
                                             <select id="branch" class="appearance-none form_input outline-0 text-scarpa-flow w-full text-input p-5 mb-4 shadow-topshadow bg-white font-bold cursor-pointer transition duration-300 border-half border-input ease" name="branch" required="required" x-model="destinations.id">
                                                 <option value="" disabled>
@@ -31,8 +28,8 @@
                                                     <option :value="destination.id" x-text="destination.label" :img_src="destination.desImg"></option>
                                                 </template>
                                             </select>
-                                            
-                                            <svg  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-svg text-scarpa-flow max-h-5 absolute top-7 right-6 pointer-events-none w-5 cursor-pointer"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-svg text-scarpa-flow max-h-5 absolute top-7 right-6 pointer-events-none w-5 cursor-pointer"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
 
                                         </div>
                                         <div class="relative mb-12 text-25">
@@ -49,7 +46,7 @@
                                         </div>
                                         <div class="accept relative flex w-full text-25">
                                             <input id="accept" value="accept" type="checkbox" name="payment" required="required" class="styled-checkbox invisible w-0">
-                                            <label for="accept" class="flex items-center w-full flex checkbox border-0 text-input text-scarpa-flow" data-v-668beab6="">I accept <label for="my-modal-4" class="ml-2 underline cursor-pointer text-scarpa-flow-600"><strong>Our Limitations</strong></label>
+                                            <label for="accept" class="flex items-center w-full checkbox border-0 text-input text-scarpa-flow" data-v-668beab6="">I accept <label for="my-modal-4" class="ml-2 underline cursor-pointer text-scarpa-flow-600"><strong>Our Limitations</strong></label>
                                             </label>
                                         </div>
                                     </form>
@@ -59,13 +56,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div x-show.transition.in="step === 2">
+                        <div x-show.transition.in="step === 2" class="h-screen">
 
 
                             form 2
 
                         </div>
-                        <div x-show.transition.in="step === 3">
+                        <div x-show.transition.in="step === 3" class="h-screen">
                             <div class="grid lg:grid-cols-2 sm:grid-flow-cols-1">
                                 <div class="px-3">
                                     <div class="grid gap-4 grid-cols-2">
@@ -112,7 +109,7 @@
                     </div>
                     <!-- / Step Content -->
                 </div>
-                <div x-show.transition="step === '4'">
+                <div x-show.transition="step === '4'" class="h-screen">
                     <div class="flex justify-center">
                         <div>
                             <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -121,12 +118,12 @@
 
                             <div class="text-gray-600 mb-8">
                                 Thank you. We have sent you an email.
-                            </div>  
+                            </div>
 
                             <button @click="step = 1" class="w-auto block mx-auto focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Make another reservation</button>
-                        </div> 
+                        </div>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <!-- Bottom Navigation -->

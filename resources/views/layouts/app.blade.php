@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,11 @@
     <title>@yield('title')</title>
     @livewireStyles
 </head>
-<body>
+<body class="bg-white">
     @include('layouts.includes.header')
 
     <!-- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 lg:py-8"> -->
-    <div class="container">
+    <div class="container bg-white">
     @yield('body')
     <div>
     
